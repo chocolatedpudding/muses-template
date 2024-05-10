@@ -12,7 +12,8 @@ body {
   margin: 0;
   padding: 0.5rem;
 }
-/**/
+/*box-sizing…要素の幅と高さにpaddingとborderを含めるようにボックスモデルを設定している
+background-color…背景色を #fefff2（クリーム色）に設定している*/
 header {
   margin-bottom: 2rem;
 }
