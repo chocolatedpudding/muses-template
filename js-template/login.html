@@ -9,20 +9,25 @@
     ユーザー名：<input /> <button>ログイン</button>
 
     <script>
-      document.addEventListener('DOMContentLoaded', async () => {
+      document.addEventListener("DOMContentLoaded", async () => {
         delete sessionStorage.username;
-        document.querySelector('input').value = '武庫川　花子';
-      });
+        document.querySelector("input").value = "武庫川　花子";
+      }); // セッションストレージの username を削除し、取得したinputの値を設定
 
-      document.querySelector('button').addEventListener('click', () => {
-        const username = document.querySelector('input').value;
+      document.querySelector("button").addEventListener("click", () => {
+        const username = document.querySelector("input").value; // usernameを入力された値にする
         if (!username) {
-          window.alert('ユーザー名を入力してください');
+          window.alert("ユーザー名を入力してください"); // usernameがなかったらアラート出す
         } else {
           sessionStorage.username = username;
-          location.href = 'index.html';
+          location.href = "index.html"; // そうでなければセッションストレージに username というキーでユーザー名を保存してindex.htmlに移動
         }
       });
     </script>
   </body>
 </html>
+
+<!--
+sessionStorage.usernameについて
+セッションストレージは、ブラウザのタブが開いている間だけ情報を保持することができる場所です。sessionStorage.username を使用することで、現在のブラウザセッションの間、ユーザー名を保存し、他のページでその情報を利用できるようになります。(このコードは、セッションストレージに username というキーでユーザー名を保存するために使用されます。)
+-->
