@@ -2,6 +2,7 @@
   font-size: 16px;
   --bg-color: #555555;
 }
+/*フォントサイズを16ピクセルに設定し、背景色を #555555（濃い灰色）に設定*/
 
 body {
   box-sizing: border-box;
@@ -11,7 +12,7 @@ body {
   margin: 0;
   padding: 0.5rem;
 }
-
+/**/
 header {
   margin-bottom: 2rem;
 }
