@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUSESメニュー</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="career.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <figure id="logo">
+        <img src="img/logo.png" />
+      </figure>
+      <div id="user_name">
+        <img src="img/user_icon.png" /><span></span> さん
+      </div>
+      <div id="upper_menu">
+        <div>
+          <img src="img/pc_site.png" /><br />
+          PC版
+        </div>
+        <div>
+          <img src="img/timeout.png" /><br />
+          残り<br />約40分
+        </div>
+        <div>
+          <a href="login.html">
+            <img src="img/logout.png" /><br />
+            ログアウト
+          </a>
+        </div>
+      </div>
+      <div id="news">
+        <div id="news_title"><img src="img/infoman.png" />新着情報</div>
+        <div id="news_num">
+          <img src="img/board.png" />未読掲示が&nbsp;<span class="unread"></span
+          >件 あります！
+        </div>
+      </div>
+      <div id="link">
+        <div><a href="index.html">HOME &gt;</a></div>
+        <div><a href="career.html">キャリア支援 &gt;</a></div>
+      </div>
+      <p>登録されていません</p>
+    </header>
+
+    <main id="career">
+      <dl>
+        <label
+          ><dt>
+            <input type="radio" name="careerRadio" value="a" />就職相談：
+          </dt>
+          <dd>就職活動に関する具体的な相談</dd></label
+        ><br />
+        <label
+          ><dt>
+            <input type="radio" name="careerRadio" value="b" />キャリア相談：
+          </dt>
+          <dd>自分自身のキャリアに関する相談</dd></label
+        ><br />
+        <label
+          ><dt>
+            <input
+              type="radio"
+              name="careerRadio"
+              value="c"
+            />就職相談(薬学部学生)：
+          </dt>
+          <dd>
+            ★薬学部学生用(薬学部事務室で相談を行います。)
+            就職活動に関する具体的な相談
+          </dd></label
+        ><br />
+        <label
+          ><dt>
+            <input type="radio" name="careerRadio" value="c" />
+            東京就活のサポート（東京センター女性スタッフ）：
+          </dt>
+          <dd>
+            東京等首都圏での就職活動や生活等に関わる相談（ZOOMのみ）
+          </dd></label
+        ><br />
+        <label
+          ><dt>
+            <input type="radio" name="careerRadio" value="c" />公務員相談：
+          </dt>
+          <dd>公務員に関する具体的な相談</dd></label
+        ><br />
+        <label
+          ><dt>
+            <input type="radio" name="careerRadio" value="c" />地元就職相談：
+          </dt>
+          <dd>地元での就職に関する具体的な相談</dd></label
+        >
+      </dl>
+      <a href="career_consul02.html">次へ</a>
+    </main>
+
+    <footer>
+      <div id="link">
+        <div><a href="index.html">HOME &gt;</a></div>
+      </div>
+      <p>Information</p>
+      <div id="information"></div>
+    </footer>
+
+    <script src="menu.js"></script>
+  </body>
+</html>
