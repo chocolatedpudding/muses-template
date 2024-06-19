@@ -31,10 +31,16 @@ main#career_support {
 
 #consul_calendar {
   margin: auto;
+  background-color: #f0f0f0;
 }
 
-#career_time {
-  text-align: auto;
+#consul_time tr td:first-child,
+#consul_time tr td:nth-child(2) {
+  text-align: center;
+}
+
+#consul_completion tr td:first-child {
+  white-space: nowrap;
 }
 
 #caution {
