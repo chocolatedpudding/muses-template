@@ -33,6 +33,10 @@ main#career_support {
   margin: auto;
 }
 
+#career_time {
+  text-align: auto;
+}
+
 #caution {
   font-size: 1.2rem;
   font-weight: bold;
