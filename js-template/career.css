@@ -152,3 +152,38 @@ main#career_support {
   color: #33485e;
   margin-left: 0.5rem;
 }
+
+/*その他と主な共通部分は省略*/
+
+a.btn-border {
+  border-radius: 0;
+}
+
+a.btn-border:before,
+a.btn-border:after {
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  content: "";
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  background: #000;
+}
+
+a.btn-border:before {
+  top: 0;
+  left: 0;
+}
+
+a.btn-border:after {
+  right: 0;
+  bottom: 0;
+}
+
+a.btn-border:hover:before,
+a.btn-border:hover:after {
+  width: 0;
+}
