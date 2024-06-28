@@ -258,3 +258,9 @@ a.btn-border:hover {
 #careerPageCalendar a:hover {
   color: #ad93da;
 }
+
+/*careerページのページ移動の色について*/
+#info_link a {
+  color: #2c2536;
+  text-decoration: none;
+}
