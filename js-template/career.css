@@ -212,6 +212,7 @@ a.btn-border:hover {
 }
 #calendar p {
   text-align: center;
+  margin-top: 0;
 }
 #calendar table {
   border-spacing: 0;
@@ -223,6 +224,10 @@ a.btn-border:hover {
   padding: 5px;
   text-align: center;
 }
-#calendar .today {
-  color: goldenrod !important;
+#calendar a {
+  color: #2c2536;
+  text-decoration: none;
+}
+#calendar a:hover {
+  color: #ad93da;
 }
