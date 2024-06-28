@@ -32,52 +32,6 @@ const startDay = startDate.getDay();
 let dayCount = 1;
 //日にちのカウント 何日から始めるかを決めます。0にすると、カレンダーに0から始まります。
 
-let calendarHtml = ""; // HTMLを組み立てる変数
-
-calendarHtml += "<p>前　　" + year + "年" + month + "月" + "　　次</p>";
-calendarHtml += "<table>";
-
-//曜日の行を作成
-for (let i = 0; i < weeks.length; i++) {
-  calendarHtml += "<td>" + "" + weeks[i] + "　" + "</td>";
-  //これで、横の配列（行）ができます。
-}
-
-for (let w = 0; w < 6; w++) {
-  calendarHtml += "<tr>";
-  //これで、縦の配列（列）ができます。
-
-  //それぞれの枠<td>をどうするか決めます。
-  for (let d = 0; d < 7; d++) {
-    if (w == 0 && d < startDay) {
-      //1行目で1日の曜日の前
-      calendarHtml += "<td></td>";
-    } else if (dayCount > endDayCount) {
-      //末尾の日数を超えた
-      calendarHtml += "<td></td>";
-    } else if (dayCount === today) {
-      //今日だったら、色を変える指定をします（class="today:cssにて色指定）。
-      calendarHtml +=
-        "<td class='today'><a href='./career_consul03.html'>" +
-        dayCount +
-        "</a></td>";
-      dayCount++;
-    } else if (dayCount < today) {
-      calendarHtml += "<td>" + dayCount + "</td>";
-      dayCount++;
-    } else {
-      calendarHtml +=
-        "<td><a href='./career_consul03.html'>" + dayCount + "</a></td>";
-      dayCount++;
-    }
-  }
-  calendarHtml += "</tr>";
-}
-calendarHtml += "</table>";
-
-document.querySelector("#calendar").innerHTML = calendarHtml;
-//ここの'#calendar'が、HTMLの< div id="calendar">< /div>にあたります。
-
 //careerページ用のカレンダー
 let careerCalendarHtml = ""; // HTMLを組み立てる変数
 
