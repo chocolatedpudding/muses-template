@@ -205,3 +205,24 @@ a.btn-border:hover {
   color: #fff;
   background: #000;
 }
+
+/*カレンダー*/
+#calendar {
+  background-color: #f0f0f0;
+}
+#calendar p {
+  text-align: center;
+}
+#calendar table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+#calendar td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+#calendar .today {
+  color: goldenrod !important;
+}
