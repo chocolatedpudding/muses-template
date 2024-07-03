@@ -231,3 +231,36 @@ a.btn-border:hover {
 #calendar a:hover {
   color: #ad93da;
 }
+
+/*カレンダー*/
+#careerPageCalendar {
+  background-color: #f0f0f0;
+}
+#careerPageCalendar p {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 2rem;
+}
+#careerPageCalendar table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+#careerPageCalendar td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+#careerPageCalendar a {
+  color: #2c2536;
+  text-decoration: none;
+}
+#careerPageCalendar a:hover {
+  color: #ad93da;
+}
+
+/*careerページのページ移動の色について*/
+#info_link a {
+  color: #2c2536;
+  text-decoration: none;
+}
