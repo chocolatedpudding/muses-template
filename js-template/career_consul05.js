@@ -15,18 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   nameText.textContent = nameStoragedData; // id=typeに出力
 
   const contentStoragedData = storage.getItem("contents");
-  //const contentStoragedData = storage.contents; // ストレージデータの取得
   contentText.textContent = contentStoragedData; // id=typeに出力
 });
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  const nameStoragedData = storage.names; // ストレージデータの取得
-  nameText.textContent = nameStoragedData; // id=typeに出力
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const contentStoragedData = storage.contents; // ストレージデータの取得
-  contentText.textContent = contentStoragedData; // id=typeに出力
-});
-*/
