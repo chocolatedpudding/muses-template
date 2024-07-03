@@ -6,7 +6,7 @@ const storage = localStorage; // ストレージをlocalStorageに設定
 let typeText = document.getElementById("type");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const typeStoragedData = storage.store; // ストレージデータの取得
+  const typeStoragedData = storage.types; // ストレージデータの取得
   typeText.textContent = typeStoragedData; // id=typeに出力
 });
 
