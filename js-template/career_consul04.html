@@ -64,28 +64,52 @@
         <tr>
           <td>相談内容</td>
           <td>
-            <select>
-              <option>【対面】応募書類の書き方・添削(履歴書・ES等)</option>
-              <option>【対面】就職活動の進め方(企業研究・求人内容等)</option>
-              <option>【WEB】就職活動の進め方(企業研究・求人内容等)</option>
-              <option>【対面】Uターン就職・残留就職について</option>
-              <option>【WEB】Uターン就職・残留就職について</option>
-              <option>【対面】内定(重複・辞退)に関わることについて</option>
-              <option>【対面】採用選考試験対策(面接・GD・SPI・論作文等)</option>
-              <option>【対面】模擬面接</option>
-              <option>【対面】その他</option>
-              <option>【WEB】その他</option>
-              <option>【対面】公務員就職について</option>
-              <option>【WEB】その他</option>
-              <option>【対面】インターンシップについて</option>
-              <option>【WEB】インターンシップについて</option>
-              <option>【WEB】オンライン面接練習</option>
+            <select id="contentDrop">
+              <option value="【対面】応募書類の書き方・添削(履歴書・ES等)">
+                【対面】応募書類の書き方・添削(履歴書・ES等)
+              </option>
+              <option value="【対面】就職活動の進め方(企業研究・求人内容等)">
+                【対面】就職活動の進め方(企業研究・求人内容等)
+              </option>
+              <option value="【WEB】就職活動の進め方(企業研究・求人内容等)">
+                【WEB】就職活動の進め方(企業研究・求人内容等)
+              </option>
+              <option value="【対面】Uターン就職・残留就職について">
+                【対面】Uターン就職・残留就職について
+              </option>
+              <option value="【WEB】Uターン就職・残留就職について">
+                【WEB】Uターン就職・残留就職について
+              </option>
+              <option value="【対面】内定(重複・辞退)に関わることについて">
+                【対面】内定(重複・辞退)に関わることについて
+              </option>
+              <option value="【対面】採用選考試験対策(面接・GD・SPI・論作文等)">
+                【対面】採用選考試験対策(面接・GD・SPI・論作文等)
+              </option>
+              <option value="【対面】模擬面接">【対面】模擬面接</option>
+              <option value="【対面】その他">【対面】その他</option>
+              <option value="【WEB】その他">【WEB】その他</option>
+              <option value="【対面】公務員就職について">
+                【対面】公務員就職について
+              </option>
+              <option value="【WEB】その他">【WEB】その他</option>
+              <option value="【対面】インターンシップについて">
+                【対面】インターンシップについて
+              </option>
+              <option value="【WEB】インターンシップについて">
+                【WEB】インターンシップについて
+              </option>
+              <option value="【WEB】オンライン面接練習">
+                【WEB】オンライン面接練習
+              </option>
             </select>
           </td>
         </tr>
       </table>
       <a href="career_consul03.html" class="btn btn-border">戻る</a>
-      <a href="career_consul05.html" class="btn btn-border">申込</a>
+      <a href="career_consul05.html" class="btn btn-border" id="nextButton04"
+        >申込</a
+      >
       <!--
       <a href="career_consul05.html">申込</a>
       -->
@@ -99,6 +123,7 @@
       <div id="information"></div>
     </footer>
 
+    <script src="career_consul04.js"></script>
     <script src="career_consul05.js"></script>
     <script src="menu.js"></script>
   </body>
