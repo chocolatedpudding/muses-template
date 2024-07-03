@@ -2,11 +2,11 @@
 
 const storage = localStorage; // ストレージをlocalStorageに設定
 
-//career_consul01のラジオボタン情報取得、数も取得
-const consulType = document.getElementsByName("careerRadio");
+//career_consul03のラジオボタン情報取得、数も取得
+const consulType = document.getElementsByName("nameRadio");
 let len = consulType.length;
 
-let checkButton = document.getElementById("nextButton");
+let checkButton = document.getElementById("nextButton03");
 
 //次へボタンを押したら選択したラジオボタンの値を取得して、ローカルストレージに追加
 checkButton.addEventListener("click", () => {
@@ -17,5 +17,5 @@ checkButton.addEventListener("click", () => {
     }
   }
 
-  storage.types = checkValue; // 'types'キーに入力値を記録
+  storage.names = checkValue; // 'names'キーに入力値を記録
 });
