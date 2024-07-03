@@ -17,14 +17,21 @@ checkButton.addEventListener("click", () => {
     }
   }
 
-  storage.store = checkValue; // 'store'キーに入力値を記録
+  storage.types = checkValue; // 'store'キーに入力値を記録
 });
 
-/*
-let typeText = document.getElementById("type");
+//career_consul03のに関して
+let checkButton03 = document.getElementById("nextButton03");
+const consulType03 = document.getElementsByName("nameRadio");
+let len03 = consulType03.length;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const storagedData = storage.store; // ストレージデータの取得
-  type.textContent = storagedData; // id=typeに出力
+checkButton03.addEventListener("click", () => {
+  let checkValue03 = "";
+  for (let i = 0; i < len03; i++) {
+    if (consulType03.item(i).checked) {
+      checkValue03 = consulType03.item(i).value;
+    }
+  }
+
+  storage.names = checkValue03; // 'store'キーに入力値を記録
 });
-*/
