@@ -6,7 +6,7 @@ const storage = localStorage; // ストレージをlocalStorageに設定
 const consulContent = document.getElementById("contentDrop");
 let checkButton = document.getElementById("nextButton04");
 
-//次へボタンを押したら選択したラジオボタンの値を取得して、ローカルストレージに追加
+//次へボタンを押したら選択したドロップダウンの値を取得して、ローカルストレージに追加
 checkButton.addEventListener("click", () => {
   let checkValue = consulContent.value;
   storage.setItem("contents", checkValue);

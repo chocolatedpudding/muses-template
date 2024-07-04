@@ -6,6 +6,7 @@ const storage = localStorage; // ストレージをlocalStorageに設定
 let typeText = document.getElementById("type");
 let nameText = document.getElementById("person");
 let contentText = document.getElementById("content");
+let timeText = document.getElementById("time");
 
 document.addEventListener("DOMContentLoaded", () => {
   const typeStoragedData = storage.types; // ストレージデータの取得
@@ -16,4 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contentStoragedData = storage.getItem("contents");
   contentText.textContent = contentStoragedData; // id=typeに出力
+
+  const timesStoragedData = storage.getItem("times");
+  timeText.textContent = timesStoragedData; // id=typeに出力
 });
