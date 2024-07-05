@@ -19,5 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   contentText.textContent = contentStoragedData; // id=typeに出力
 
   const timesStoragedData = storage.getItem("times");
-  timeText.textContent = timesStoragedData; // id=typeに出力
+  const datesStoragedData = storage.getItem("dates");
+  timeText.textContent = datesStoragedData + "　　" + timesStoragedData; // id=typeに出力
 });
