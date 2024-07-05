@@ -44,7 +44,8 @@ main#career_support {
   background-color: #f0f0f0;
 }
 #career_support p {
-  padding-top: 1.5rem;
+  margin: 0;
+  padding-top: 1rem;
   background-color: #f0f0f0;
 }
 
