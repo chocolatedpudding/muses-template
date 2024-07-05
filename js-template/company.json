@@ -1,0 +1,23 @@
+[
+  {
+    "name": "伊藤忠テクノソリューションズ株式会社 本社",
+    "industry": "情報通信業(情報サービス)",
+    "location": "東京",
+    "employees": "4718人",
+    "common": "CTC"
+  },
+  {
+    "name": "日本電気株式会社 本社",
+    "industry": "製造業（電気・情報通信機械器具",
+    "location": "東京",
+    "employees": "23912人",
+    "common": "NEC"
+  },
+  {
+    "name": "株式会社 三井住友銀行 本店",
+    "industry": "金融・保険業（銀行・信用金庫・農林中金）",
+    "location": "東京",
+    "employees": "29495人",
+    "common": "SMBC"
+  }
+]
