@@ -2,6 +2,22 @@
 
 const storage = localStorage; // ストレージをlocalStorageに設定
 
+let typeText = document.getElementById("type");
+let nameText = document.getElementById("person");
+let timeText = document.getElementById("time");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const typeStoragedData = storage.types; // ストレージデータの取得
+  typeText.textContent = typeStoragedData; // id=typeに出力
+
+  const nameStoragedData = storage.names; // ストレージデータの取得
+  nameText.textContent = nameStoragedData; // id=typeに出力
+
+  const timesStoragedData = storage.getItem("times");
+  const datesStoragedData = storage.getItem("dates");
+  timeText.textContent = datesStoragedData + "　　" + timesStoragedData; // id=typeに出力
+});
+
 //career_consul03のラジオボタン情報取得、数も取得
 const consulContent = document.getElementById("contentDrop");
 let checkButton = document.getElementById("nextButton04");

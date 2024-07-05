@@ -55,19 +55,35 @@ for (let w = 0; w < 6; w++) {
     } else if (dayCount > endDayCount) {
       //末尾の日数を超えた
       calendarHtml += "<td></td>";
-    } else if (dayCount === today) {
-      //今日だったら、色を変える指定をします（class="today:cssにて色指定）。
-      calendarHtml +=
-        "<td class='today'><a href='./career_consul03.html'>" +
-        dayCount +
-        "</a></td>";
-      dayCount++;
     } else if (dayCount < today) {
-      calendarHtml += "<td>" + dayCount + "</td>";
+      calendarHtml +=
+        "<td data-date='" +
+        year +
+        "/" +
+        month +
+        "/" +
+        dayCount +
+        "(" +
+        weeks[d] +
+        ")'>" +
+        dayCount +
+        "</td>";
       dayCount++;
     } else {
       calendarHtml +=
-        "<td><a href='./career_consul03.html'>" + dayCount + "</a></td>";
+        "<td data-date='" +
+        year +
+        "/" +
+        month +
+        "/" +
+        dayCount +
+        "（" +
+        weeks[d] +
+        "）'>" +
+        "<a href='./career_consul03.html'>" +
+        dayCount +
+        "</a></td>";
+      //"<td><a href='./career_consul03.html'>" + dayCount + "</a></td>";
       dayCount++;
     }
   }
@@ -78,45 +94,12 @@ calendarHtml += "</table>";
 document.querySelector("#calendar").innerHTML = calendarHtml;
 //ここの'#calendar'が、HTMLの< div id="calendar">< /div>にあたります。
 
-//careerページ用のカレンダー
-let careerCalendarHtml = ""; // HTMLを組み立てる変数
+const storage = localStorage;
 
-careerCalendarHtml += "<p>前　　" + year + "年" + month + "月" + "　　次</p>";
-careerCalendarHtml += "<table>";
-
-//曜日の行を作成
-for (let i = 0; i < weeks.length; i++) {
-  careerCalendarHtml += "<td>" + "" + weeks[i] + "　" + "</td>";
-  //これで、横の配列（行）ができます。
-}
-
-for (let w = 0; w < 6; w++) {
-  careerCalendarHtml += "<tr>";
-  //これで、縦の配列（列）ができます。
-
-  //それぞれの枠<td>をどうするか決めます。
-  for (let d = 0; d < 7; d++) {
-    if (w == 0 && d < startDay) {
-      //1行目で1日の曜日の前
-      careerCalendarHtml += "<td></td>";
-    } else if (dayCount > endDayCount) {
-      //末尾の日数を超えた
-      careerCalendarHtml += "<td></td>";
-    } else if (dayCount === today) {
-      //今日だったら、色を変える指定をします（class="today:cssにて色指定）。
-      careerCalendarHtml += "<td class='today'>" + dayCount + "</td>";
-      dayCount++;
-    } else if (dayCount < today) {
-      careerCalendarHtml += "<td>" + dayCount + "</td>";
-      dayCount++;
-    } else {
-      careerCalendarHtml += "<td>" + dayCount + "</td>";
-      dayCount++;
-    }
-  }
-  careerCalendarHtml += "</tr>";
-}
-careerCalendarHtml += "</table>";
-
-document.querySelector("#careerPageCalendar").innerHTML = careerCalendarHtml;
-//ここの'#careerPageCalendar'が、HTMLの< div id="careerPageCalendar">< /div>にあたります。
+document.querySelectorAll("#calendar td").forEach(function (td) {
+  td.addEventListener("click", function () {
+    const date = this.getAttribute("data-date");
+    storage.setItem("dates", date);
+    storage.dates = date; // 'contents'キーに入力値を記録
+  });
+});
