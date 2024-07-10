@@ -1,5 +1,21 @@
 "use strict";
 
+// 予定取得
+const storage = localStorage; // ストレージをlocalStorageに設定
+const typeStoragedData = storage.types;
+const nameStoragedData = storage.names;
+const timesStoragedData = storage.getItem("times");
+const datesStoragedData = storage.getItem("dates");
+const contentStoragedData = storage.getItem("contents");
+
+function extractDate(str) {
+  const match = str.match(/\/(\d{1,2})\(/);
+  return match ? match[1] : null;
+}
+
+console.log(extractDate(datesStoragedData));
+
+// カレンダー
 const weeks = ["日", "月", "火", "水", "木", "金", "土"];
 
 const date = new Date();
@@ -56,12 +72,9 @@ for (let w = 0; w < 6; w++) {
     } else if (dayCount > endDayCount) {
       //末尾の日数を超えた
       careerCalendarHtml += "<td></td>";
-    } else if (dayCount === today) {
+    } else if (Number(dayCount) === Number(extractDate(datesStoragedData))) {
       //今日だったら、色を変える指定をします（class="today:cssにて色指定）。
-      careerCalendarHtml += "<td class='today'>" + dayCount + "</td>";
-      dayCount++;
-    } else if (dayCount < today) {
-      careerCalendarHtml += "<td>" + dayCount + "</td>";
+      careerCalendarHtml += "<td id='eventPopup'>" + dayCount + "</td>";
       dayCount++;
     } else {
       careerCalendarHtml += "<td>" + dayCount + "</td>";
@@ -73,4 +86,24 @@ for (let w = 0; w < 6; w++) {
 careerCalendarHtml += "</table>";
 
 document.querySelector("#careerPageCalendar").innerHTML = careerCalendarHtml;
+
+// ポップアップ表示
+
+const popup = document.getElementById("eventPopup");
+popup.addEventListener("click", function () {
+  alert(
+    "相談種別：" +
+      typeStoragedData +
+      "\n応対者：　" +
+      nameStoragedData +
+      "\n相談日時：" +
+      datesStoragedData +
+      "　" +
+      timesStoragedData +
+      "\n相談内容：" +
+      contentStoragedData
+  );
+});
+
 //ここの'#careerPageCalendar'が、HTMLの< div id="careerPageCalendar">< /div>にあたります。
+//textPopup = datesStoragedData + "　" + timesStoragedData + "";
