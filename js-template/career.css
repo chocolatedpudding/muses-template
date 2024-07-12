@@ -42,6 +42,8 @@ main#career_support {
 .form-container {
   margin: 0;
   background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
 }
 #companyInfo {
   margin: 0;
@@ -51,7 +53,20 @@ main#career_support {
 .company {
   margin-top: 1rem;
   margin-bottom: 0;
+  border: 1px solid #ddd;
 }
+.company p,
+.company h2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.form-container p {
+  margin: 0;
+  margin-right: 10px;
+  width: 150px; /* ラベルの幅を統一 */
+}
+
 #consul_time tr td:first-child,
 #consul_time tr td:nth-child(2) {
   text-align: center;
