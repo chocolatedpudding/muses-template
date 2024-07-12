@@ -33,7 +33,25 @@ main#career_support {
   margin: auto;
   background-color: #f0f0f0;
 }
-
+#companyName,
+#companyCommonName,
+.campanyBtn {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+.form-container {
+  margin: 0;
+  background-color: #f0f0f0;
+}
+#companyInfo {
+  margin: 0;
+  padding-top: 0.5rem;
+  background-color: #f0f0f0;
+}
+.company {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 #consul_time tr td:first-child,
 #consul_time tr td:nth-child(2) {
   text-align: center;
