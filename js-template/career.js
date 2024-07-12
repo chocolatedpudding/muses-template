@@ -9,10 +9,10 @@ const datesStoragedData = storage.getItem("dates");
 const contentStoragedData = storage.getItem("contents");
 
 function extractDate(str) {
-  const match = str.match(/\/(\d{1,2})\(/);
-  return match ? match[1] : null;
+  const match = str.match(/\d{1,2}(?=\（)/);
+  return match ? match[0] : null;
 }
-
+console.log(datesStoragedData);
 console.log(extractDate(datesStoragedData));
 
 // カレンダー
