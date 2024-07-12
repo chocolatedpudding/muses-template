@@ -29,3 +29,21 @@ checkButton.addEventListener("click", () => {
 
   storage.contents = checkValue; // 'contents'キーに入力値を記録
 });
+
+/*
+fetch('careerData.json')
+    .then(response => response.json())
+    .then(jsonObject => {
+
+        // JSONオブジェクトに追加
+        jsonObject.type = typeStoragedData;
+        jsonObject.name = nameStoragedData;
+        jsonObject.data = dateStoragedData;
+        jsonObject.time = timeStoragedData;
+        jsonObject.content = contentStoragedData;
+
+        // 更新したJSONオブジェクトをコンソールに表示
+        console.log(jsonObject);
+    })
+    .catch(error => console.error('Error:', error));
+    */

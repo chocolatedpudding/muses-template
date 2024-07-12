@@ -39,6 +39,16 @@ main#career_support {
   text-align: center;
 }
 
+#career_support table {
+  border-collapse: collapse;
+  background-color: #f0f0f0;
+}
+#career_support p {
+  margin: 0;
+  padding-top: 1rem;
+  background-color: #f0f0f0;
+}
+
 #consul_completion tr td:first-child {
   white-space: nowrap;
 }
@@ -263,4 +273,9 @@ a.btn-border:hover {
 #info_link a {
   color: #2c2536;
   text-decoration: none;
+}
+
+#consul_completion,
+#consul_time {
+  width: 24.8rem;
 }
