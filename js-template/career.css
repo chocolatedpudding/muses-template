@@ -9,6 +9,10 @@ main#career_support {
   background-color: #3a3d5e;
 }
 
+#eventPopup {
+  color: #323ffe;
+}
+
 #consul_list,
 #nextPage {
   margin: 0;
