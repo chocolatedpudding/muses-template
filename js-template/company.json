@@ -19,5 +19,19 @@
     "location": "東京",
     "employees": "29495人",
     "common": "SMBC"
+  },
+  {
+    "name": "日本電信電話 株式会社   本社",
+    "industry": "情報通信業（通信）",
+    "location": "東京",
+    "employees": "2901人",
+    "common": "NTT"
+  },
+  {
+    "name": "日本放送協会",
+    "industry": "情報通信業（放送）",
+    "location": "東京",
+    "employees": "10333人",
+    "common": "NHK"
   }
 ]
